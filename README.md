@@ -1,3 +1,4 @@
-# sei16
+SEI-DI-16
+===============
 
-Website for SEI 2016
+SEI@DI 16 Website
