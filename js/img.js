@@ -1,14 +1,13 @@
 
 
-// The function to draw the scene
-function draw() {
-    var c = document.getElementById("Canvas");
-	var ctx = c.getContext("2d");
-	var img = new Image();
-	img.src="logos.png";
-	img.addEventListener("load", function(){canvas.drawImage(img,0,0)},false);
 
-}
+	var img = document.getElementById('sei');
 
+	var interval = window.setInterval(function(){
+	if(img.style.visibility == 'hidden'){
+        	img.style.visibility = 'visible';
+    	}else{
+        	img.style.visibility = 'hidden';
+    	}
+	}, 1000);
 
-$(document).ready(draw);
