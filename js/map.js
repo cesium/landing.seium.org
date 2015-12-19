@@ -1,182 +1,103 @@
-// Create an array to store our particles
-var particles = [];
+var canvas = document.getElementById("canvas"),
+    ctx = canvas.getContext('2d');
 
-// The amount of particles to render
-var particleCount = 30;
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
-// The maximum velocity in each direction
-var maxVelocity = 2;
+var stars = [], // Array that contains the stars
+    FPS = 60, // Frames per second
+    x = 100, // Number of stars
+    mouse = {
+      x: 0,
+      y: 0
+    };  // mouse location
 
-// The target frames per second (how often do we want to update / redraw the scene)
-var targetFPS = 33;
+// Push stars to array
 
-// Set the dimensions of the canvas as variables so they can be used.
-var canvasWidth = 400;
-var canvasHeight = 400;
-
-// Create an image object (only need one instance)
-var imageObj = new Image();
-
-// Once the image has been downloaded then set the image on all of the particles
-imageObj.onload = function() {
-    particles.forEach(function(particle) {
-            particle.setImage(imageObj);
-    });
-};
-
-// Once the callback is arranged then set the source of the image
-imageObj.src = "http://www.blog.jonnycornwell.com/wp-content/uploads/2012/07/Smoke10.png";
-
-// A function to create a particle object.
-function Particle(context) {
-
-    // Set the initial x and y positions
-    this.x = 0;
-    this.y = 0;
-
-    // Set the initial velocity
-    this.xVelocity = 0;
-    this.yVelocity = 0;
-
-    // Set the radius
-    this.radius = 5;
-
-    // Store the context which will be used to draw the particle
-    this.context = context;
-
-    
-
-    // The function to draw the particle on the canvas.
-    this.draw = function() {
-
-        
-        // If an image is set draw it
-        if(this.image){
-            this.context.drawImage(this.image, this.x-128, this.y-128);         
-            // If the image is being rendered do not draw the circle so break out of the draw function                
-            return;
-        }
-        // Draw the circle as before, with the addition of using the position and the radius from this object.
-        this.context.beginPath();
-        this.context.arc(this.x, this.y, this.radius, 0, 2 * Math.PI, false);
-        this.context.fillStyle = "rgba(0, 255, 255, 1)";
-        this.context.fill();
-        this.context.closePath();
-    };
-
-
-    // Update the particle.
-    this.update = function() {
-        // Update the position of the particle with the addition of the velocity.
-        this.x += this.xVelocity;
-        this.y += this.yVelocity;
-
-        // Check if has crossed the right edge
-        if (this.x >= canvasWidth) {
-            this.xVelocity = -this.xVelocity;
-            this.x = canvasWidth;
-        }
-        // Check if has crossed the left edge
-        else if (this.x <= 0) {
-            this.xVelocity = -this.xVelocity;
-            this.x = 0;
-        }
-
-        // Check if has crossed the bottom edge
-        if (this.y >= canvasHeight) {
-            this.yVelocity = -this.yVelocity;
-            this.y = canvasHeight;
-        }
-        
-        // Check if has crossed the top edge
-        else if (this.y <= 0) {
-            this.yVelocity = -this.yVelocity;
-            this.y = 0;
-        }
-    };
-
-    // A function to set the position of the particle.
-    this.setPosition = function(x, y) {
-        this.x = x;
-        this.y = y;
-    };
-
-    // Function to set the velocity.
-    this.setVelocity = function(x, y) {
-        this.xVelocity = x;
-        this.yVelocity = y;
-    };
-    
-    this.setImage = function(image){
-        this.image = image;
-    }
+for (var i = 0; i < x; i++) {
+  stars.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    radius: Math.random() * 3,
+    vx: Math.floor(Math.random() * 100) - 50,
+    vy: Math.floor(Math.random() * 100) - 50
+  });
 }
 
-// A function to generate a random number between 2 values
-function generateRandom(min, max){
-    return Math.random() * (max - min) + min;
-}
+// Draw the scene
 
-// The canvas context if it is defined.
-var context;
-
-// Initialise the scene and set the context if possible
-function init() {
-    var canvas = document.getElementById('myCanvas');
-    if (canvas.getContext) {
-
-        // Set the context variable so it can be re-used
-        context = canvas.getContext('2d');
-
-        // Create the particles and set their initial positions and velocities
-        for(var i=0; i < particleCount; ++i){
-            var particle = new Particle(context);
-            
-            // Set the position to be inside the canvas bounds
-            particle.setPosition(generateRandom(0, canvasWidth), generateRandom(0, canvasHeight));
-            
-            // Set the initial velocity to be either random and either negative or positive
-            particle.setVelocity(generateRandom(-maxVelocity, maxVelocity), generateRandom(-maxVelocity, maxVelocity));
-            particles.push(particle);            
-        }
-    }
-    else {
-        alert("Please use a modern browser");
-    }
-}
-
-// The function to draw the scene
 function draw() {
-    // Clear the drawing surface and fill it with a black background
-    context.fillStyle = "rgba(0, 0, 0, 0.5)";
-    context.fillRect(0, 0, 400, 400);
-
-    // Go through all of the particles and draw them.
-    particles.forEach(function(particle) {
-        particle.draw();
-    });
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  
+  ctx.globalCompositeOperation = "lighter";
+  
+  for (var i = 0, x = stars.length; i < x; i++) {
+    var s = stars[i];
+  
+    ctx.fillStyle = "#fff";
+    ctx.beginPath();
+    ctx.arc(s.x, s.y, s.radius, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.fillStyle = 'black';
+    ctx.stroke();
+  }
+  
+  ctx.beginPath();
+  for (var i = 0, x = stars.length; i < x; i++) {
+    var starI = stars[i];
+    ctx.moveTo(starI.x,starI.y); 
+    for (var j = 0, x = stars.length; j < x; j++) {
+      var starII = stars[j];
+      if(distance(starI, starII) < 100 ){
+        ctx.lineTo(starII.x,starII.y);
+      }
+      
+    }
+  }
+  ctx.lineWidth = 0.1;
+  ctx.strokeStyle = 'white';
+  ctx.stroke();
 }
 
-// Update the scene
+function distance( point1, point2 ){
+  var xs = 0;
+  var ys = 0;
+ 
+  xs = point2.x - point1.x;
+  xs = xs * xs;
+ 
+  ys = point2.y - point1.y;
+  ys = ys * ys;
+ 
+  return Math.sqrt( xs + ys );
+}
+
+// Update star locations
+
 function update() {
-    particles.forEach(function(particle) {
-        particle.update();
-    });
+  for (var i = 0, x = stars.length; i < x; i++) {
+    var s = stars[i];
+  
+    s.x += s.vx / FPS;
+    s.y += s.vy / FPS;
+    
+    if (s.x < 0 || s.x > canvas.width) s.vx = -s.vx;
+    if (s.y < 0 || s.y > canvas.height) s.vy = -s.vy;
+  }
 }
 
-// Initialize the scene
-init();
+/*canvas.addEventListener('mousemove', function(e){
+  mouse.x = e.clientX;
+  mouse.y = e.clientY;
+});*/
 
-// If the context is set then we can draw the scene (if not then the browser does not support canvas)
-if (context) {
-    setInterval(function() {
-        // Update the scene befoe drawing
-        update();
+// Update and draw
 
-        // Draw the scene
-        draw();
-    }, 1000 / targetFPS);
+function tick() {
+  draw();
+  update();
+  requestAnimationFrame(tick);
 }
 
 
-$(document).ready(draw);
+tick();

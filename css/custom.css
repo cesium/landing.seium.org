@@ -1,9 +1,39 @@
-#myCanvas{
-    background:black;
+#canvas{
+    background:#111111;
+    cursor: none;
     width: 100%;
     height: 100%;
 }
 
 body{
-  background:black;
+  background:#111111;
 }
+
+p{
+	font-family: 'Oswald', sans-serif;
+	font-weight: 700;
+	position:absolute;
+	left:38%;
+	bottom:6%;
+	font-size:45px;
+	color:#EAEAEA;
+
+}
+a{
+		font-family: 'Lato', sans-serif;
+		font-weight: 300;
+		position:absolute;
+		left:44%;
+		bottom:6%;
+		color:#EAEAEA;
+		font-size: 20px;
+
+}
+
+img{
+	position:absolute;
+	left:32%;
+	bottom:32%;
+	width:35%;
+}
+
