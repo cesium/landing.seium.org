@@ -1,39 +1,113 @@
+body {
+  background: #2A3147;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.u-padding-md {
+    padding-bottom: 25px;
+}
+
+.u-padding-sm {
+    padding-bottom: 15px;
+}
+
 #canvas{
-    background:#111111;
-    cursor: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: #2A3147;
     width: 100%;
     height: 100%;
 }
 
-body{
-  background:#111111;
+.content {
+    text-align: center;
+    color: #EAEAEA;
 }
 
-p{
-	font-family: 'Oswald', sans-serif;
-	font-weight: 700;
-	position:absolute;
-	left:38%;
-	bottom:6%;
-	font-size:45px;
-	color:#EAEAEA;
-
-}
-a{
-		font-family: 'Lato', sans-serif;
-		font-weight: 300;
-		position:absolute;
-		left:44%;
-		bottom:6%;
-		color:#EAEAEA;
-		font-size: 20px;
-
+.sei-logo img {
+    max-width: 300px;
 }
 
-img{
-	position:absolute;
-	left:32%;
-	bottom:32%;
-	width:35%;
+.title-text {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+    margin: 0;
 }
 
+.subtitle-text {
+    margin: 0;
+}
+
+.subtitle-text a {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    text-decoration: none;
+    color: #EAEAEA;
+    transition: 0.5s ease;
+    border-bottom: 1px solid transparent;
+}
+
+h2.subtitle-text {
+    font-size: 20px;
+}
+
+h3.subtitle-text {
+    font-size: 16px;
+}
+
+.subtitle-text a:hover {
+    border-bottom: 1px solid #EAEAEA;
+}
+
+.sei-contacts a {
+    color: #EAEAEA;
+    text-decoration: none;
+}
+
+.fa-stack:hover .fa-stack-1x {
+    color: #2A3147;
+}
+
+.fa-stack:hover .fa-circle-thin::before {
+    content: "\f111";
+}
+
+.fa-circle-thin, .fa-circle, .fa-stack-1x {
+    transition: 0.5s ease;
+}
+
+@media(max-width: 320px) {
+    .sei-logo img {
+        max-width: 200px;
+    }
+}
+
+@media(max-height: 480px) {
+    .sei-logo img {
+        max-width: 120px;
+    }
+
+    .title-text {
+        font-size: 30px;
+    }
+
+    h2.subtitle-text {
+        font-size: 14px;
+    }
+
+    h3.subtitle-text {
+        font-size: 10px;
+    }
+}
