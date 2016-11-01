@@ -116,4 +116,4 @@ function tick() {
 }
 
 
-tick();
+//tick();
