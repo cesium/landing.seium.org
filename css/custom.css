@@ -82,15 +82,17 @@ h3.subtitle-text {
 }
 
 .fa-stack:hover .fa-stack-1x {
-    color: #EAEAEA;
+    color: #5A748A;
 }
 
 .fa-stack:hover .fa-circle-thin::before {
-    content: "\f111";
+    /*content: "\f111";*/
+    color: #5A748A;
+    transition: 0.3s ease;
 }
 
 .fa-circle-thin, .fa-circle, .fa-stack-1x {
-    transition: 0.5s ease;
+    transition: 0.3s ease;
 }
 
 @media(max-width: 320px) {
