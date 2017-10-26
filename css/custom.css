@@ -1,17 +1,9 @@
-html {
-  height: 100%;
-}
-
 body {
-  height: 100%;
-   background-image: url("../img/background_1.png");
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
+  background: #2A3147;
 }
 
 .wrapper {
+    position: relative;
     width: 100%;
     height: 100%;
     display: flex;
@@ -32,10 +24,24 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: -2;
+    -webkit-filter: blur(3px);
+    background-size: cover;
+
     width: 100%;
     height: 100%;
+}
 
+.wrapper::before {
+  content: " ";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0.45;
 }
 
 .content {
@@ -44,8 +50,7 @@ body {
 }
 
 .sei-logo img {
-    margin-top: 20px;
-    max-width: 200px;
+    max-width: 300px;
 }
 
 .title-text {
@@ -61,7 +66,7 @@ body {
 
 .subtitle-text a {
     font-family: 'Lato', sans-serif;
-    font-weight: 300;
+    font-weight: bold;
     text-decoration: none;
     color: #EAEAEA;
     transition: 0.5s ease;
@@ -86,17 +91,15 @@ h3.subtitle-text {
 }
 
 .fa-stack:hover .fa-stack-1x {
-    color: #5A748A;
+    color: #2A3147;
 }
 
 .fa-stack:hover .fa-circle-thin::before {
-    /*content: "\f111";*/
-    color: #5A748A;
-    transition: 0.3s ease;
+    content: "\f111";
 }
 
 .fa-circle-thin, .fa-circle, .fa-stack-1x {
-    transition: 0.3s ease;
+    transition: 0.5s ease;
 }
 
 @media(max-width: 320px) {
