@@ -2,4 +2,3 @@ Landing page for [SEI - Semana da Engenharia Informática](http://seium.org) - c
 Made for the 2018 Edition.
 
 Made with :heart: by CeSIUM
-
