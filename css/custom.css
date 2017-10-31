@@ -1,35 +1,23 @@
+html {
+  height: 100%;
+}
+
 body {
-  background: #2A3147;
+  height: 100%;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   background-color: black;
 }
 
 .wrapper {
-    position: relative;
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
-
-.u-padding-md {
-    padding-bottom: 25px;
-}
-
-.u-padding-sm {
-    padding-bottom: 15px;
-}
-
-#canvas{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -2;
-    -webkit-filter: blur(3px);
-    background-size: cover;
-
-    width: 100%;
-    height: 100%;
 }
 
 .wrapper::before {
@@ -44,13 +32,134 @@ body {
   opacity: 0.45;
 }
 
+.u-padding-md {
+    padding-bottom: 25px;
+}
+
+.u-padding-sm {
+    padding-bottom: 15px;
+}
+
+@media only screen and (max-device-width: 480px) {
+  #crossfade {
+    display: none;
+  }
+
+  body {
+    background-image: url("../img/background-footer.png");
+  }
+}
+
+#crossfade > img {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    opacity: 0;
+    z-index: -2;
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    -webkit-backface-visibility: hidden;
+    -webkit-animation: imageAnimation 30s linear infinite 0s;
+    -moz-animation: imageAnimation 30s linear infinite 0s;
+    -o-animation: imageAnimation 30s linear infinite 0s;
+    -ms-animation: imageAnimation 30s linear infinite 0s;
+    animation: imageAnimation 30s linear infinite 0s;
+}
+
+#crossfade > img:nth-child(2)  {
+    background-image: url(../images/2.jpg);
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s;
+}
+#crossfade > img:nth-child(3) {
+    background-image: url(../images/3.jpg);
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s;
+}
+#crossfade > img:nth-child(4) {
+    background-image: url(../images/4.jpg);
+    -webkit-animation-delay: 18s;
+    -moz-animation-delay: 18s;
+    -o-animation-delay: 18s;
+    -ms-animation-delay: 18s;
+    animation-delay: 18s;
+}
+#crossfade > img:nth-child(5) {
+    background-image: url(../images/5.jpg);
+    -webkit-animation-delay: 24s;
+    -moz-animation-delay: 24s;
+    -o-animation-delay: 24s;
+    -ms-animation-delay: 24s;
+    animation-delay: 24s;
+}
+
+@-webkit-keyframes imageAnimation {
+    0% { opacity: 0;
+    -webkit-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -webkit-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+@-moz-keyframes imageAnimation {
+    0% { opacity: 0;
+    -moz-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -moz-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+@-o-keyframes imageAnimation {
+    0% { opacity: 0;
+    -o-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -o-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+@-ms-keyframes imageAnimation {
+    0% { opacity: 0;
+    -ms-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -ms-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+@keyframes imageAnimation {
+    0% { opacity: 0;
+    animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
 .content {
     text-align: center;
     color: #EAEAEA;
 }
 
 .sei-logo img {
-    max-width: 300px;
+    margin-top: 20px;
+    max-width: 200px;
 }
 
 .title-text {
@@ -91,15 +200,17 @@ h3.subtitle-text {
 }
 
 .fa-stack:hover .fa-stack-1x {
-    color: #2A3147;
+    color: #5A748A;
 }
 
 .fa-stack:hover .fa-circle-thin::before {
-    content: "\f111";
+    /*content: "\f111";*/
+    color: #5A748A;
+    transition: 0.3s ease;
 }
 
 .fa-circle-thin, .fa-circle, .fa-stack-1x {
-    transition: 0.5s ease;
+    transition: 0.3s ease;
 }
 
 @media(max-width: 320px) {
