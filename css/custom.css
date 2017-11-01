@@ -85,39 +85,19 @@ body {
 }
 
 @keyframes backgroundchangeFadeInOut {
-    0% {
-        opacity:1;
-    }
-    17% {
-        opacity:1;
-    }
-    25% {
-        opacity:0;
-    }
-    92% {
-        opacity:0;
-    }
-    100% {
-        opacity:1;
-    }
+    0% { opacity: 1; }
+    17% { opacity: 1; }
+    25% { opacity: 0; }
+    92% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 @-webkit-keyframes backgroundchangeFadeInOut {
-    0% {
-        opacity:1;
-    }
-    17% {
-        opacity:1;
-    }
-    25% {
-        opacity:0;
-    }
-    92% {
-        opacity:0;
-    }
-    100% {
-        opacity:1;
-    }
+  0% { opacity: 1; }
+  17% { opacity: 1; }
+  25% { opacity: 0; }
+  92% { opacity: 0; }
+  100% { opacity: 1; }
 }
 #backgroundchange div:nth-of-type(1) {
     animation-delay: 24s;
