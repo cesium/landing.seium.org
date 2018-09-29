@@ -1,4 +1,1 @@
-Landing page for [SEI - Semana da Engenharia Informática](http://seium.org) - cost-free Computer Engineering Week, made by students for students.
-Made for the 2018 Edition.
-
-Made with :heart: by [Hugo Brandão](https://github.com/jhugobb) and CeSIUM
+Landing page for [SEI - Semana da Engenharia Informática](http://seium.org) - 2019 Edition, happening between February 4 and 8.
