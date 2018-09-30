@@ -41,20 +41,6 @@ body {
     padding-bottom: 15px;
 }
 
-@media only screen and (max-device-width: 480px) {
-  #backgroundchange {
-    display: none;
-  }
-
-  .darken {
-    opacity: 0;
-  }
-
-  body {
-    background-image: url("../img/background-footer.png");
-  }
-}
-
 .backgroundimg {
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -201,26 +187,28 @@ h3.subtitle-text {
     transition: 0.3s ease;
 }
 
-@media(max-width: 320px) {
-    .sei-logo img {
-        max-width: 200px;
-    }
-}
+@media (max-width: 480px) {
+  .darken {
+    display: none;
+  }
 
-@media(max-height: 480px) {
-    .sei-logo img {
-        max-width: 120px;
-    }
+  body {
+    background-image: url("../img/background-footer.png");
+  }
 
-    .title-text {
-        font-size: 30px;
-    }
+  .sei-logo img {
+    max-width: 120px;
+  }
 
-    h2.subtitle-text {
-        font-size: 14px;
-    }
+  .title-text {
+    font-size: 28px;
+  }
 
-    h3.subtitle-text {
-        font-size: 10px;
-    }
+  h2.subtitle-text {
+    font-size: 14px;
+  }
+
+  h3.subtitle-text {
+    font-size: 10px;
+  }
 }
