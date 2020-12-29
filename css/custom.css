@@ -1,5 +1,10 @@
 html {
   height: 100%;
+  --sei-white: #FEFCFB;
+  --sei-light-blue: #93B5F0;
+  --sei-blue: #5D79D5;
+  --sei-dark-blue: #263D92;
+  --sei-black-blue: #080E20;
 }
 
 body {
@@ -193,7 +198,13 @@ h3.subtitle-text {
   }
 
   body {
-    background-image: url("../img/background-footer.png");
+    background: var(--sei-light-blue);
+    animation: 5s infinite alternate linear breathing-background;
+  }
+
+  @keyframes breathing-background {
+    0% { background-color: var(--sei-light-blue);}
+    100% { background-color: var(--sei-dark-blue);}
   }
 
   .sei-logo img {
