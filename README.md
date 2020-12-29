@@ -7,6 +7,6 @@ Keep in touch!
 #### ![alt text][face] &nbsp; [SEI - Semana da Engenharia Informática na Universidade do Minho](https://www.facebook.com/SEI.UMinho/)
 #### ![alt text][insta] &nbsp; [cesiuminho](https://www.instagram.com/cesiuminho/)
 
-[logo]: img/xs-logo.png
+[logo]: img/logo-xs.png
 [insta]: img/instagram.png
 [face]: img/facebook.png
