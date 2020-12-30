@@ -1,12 +1,64 @@
-# ![alt text][logo] &nbsp; SEI 21
+[contributing]: CONTRIBUTING.md
+[code_of_conduct]: CODE_OF_CONDUCT.md
+[license]: LICENSE.txt
 
-Landing page for [SEI - Semana da Engenharia Informática](http://seium.org) - 2021 Edition, happening between February 23 and 28.
+# SEI's landing page
 
-Keep in touch!
+A landing page for the Software Engineering Week website built with React.
 
-#### ![alt text][face] &nbsp; [SEI - Semana da Engenharia Informática na Universidade do Minho](https://www.facebook.com/SEI.UMinho/)
-#### ![alt text][insta] &nbsp; [SEI - Semana da Engenharia Informática na Universidade do Minho](https://www.instagram.com/SEI.UMinho/)
+## :rocket: Getting Started
 
-[logo]: img/logo-xs.png
-[insta]: img/instagram.png
-[face]: img/facebook.png
+These instructions will get you a copy of the project up and running on your
+local machine for development and testing purposes.
+
+### :inbox_tray: Prerequisites
+
+The following software is required to be installed on your system:
+
+- [nodejs 15.7+](https://nodejs.org/en/download/)
+
+Install all dependencies using `yarn`.
+
+### :hammer: Development
+
+Starting the development server.
+
+```
+yarn start
+```
+
+Format your code.
+
+```
+yarn format
+```
+
+Lint your code.
+
+```
+yarn lint
+```
+
+Thanks to [husky](https://github.com/typicode/husky), the `lint` and `format`
+script will run every time you make a commit. If you receive any warnings or
+your code isn't properly formatted, you should update your commit before pushing
+your code.
+
+### :package: Deployment
+
+Bundling the app into static files for production.
+
+```
+yarn build
+```
+
+## :handshake: Contributing
+
+Please read [CONTRIBUTING][contributing] and [CODE_OF_CONDUCT][code_of_conduct]
+for details on our code of conduct and the process for submitting pull requests
+to us.
+
+## :memo: License
+
+This project is licensed under the MIT License - see the [LICENSE][license] file
+for details.
