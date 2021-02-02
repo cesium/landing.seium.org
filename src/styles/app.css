@@ -74,6 +74,7 @@ a.social-link:hover {
   transform: scale(1.5);
 }
 
+a.registration,
 a.edicao,
 a.mailSponser {
   font-family: "Coolvetica", sans-serif;
@@ -84,6 +85,7 @@ a.mailSponser {
   text-decoration: none;
 }
 
+a.registration:hover,
 a.edicao:hover,
 a.mailSponser:hover {
   color: #263d92;
