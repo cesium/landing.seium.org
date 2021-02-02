@@ -1,3 +1,8 @@
 [build]
   command = "yarn run build"
   publish = "build"
+[build.processing]
+  skip_processing = false
+[build.processing.images]
+  compress = true
+

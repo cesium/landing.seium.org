@@ -4,6 +4,8 @@
 
 # SEI's landing page
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7eaf047e-5f4c-42d4-b55b-985977260d84/deploy-status)](https://app.netlify.com/sites/landing-2021-seium/deploys)
+
 A landing page for the Software Engineering Week website built with React.
 
 ## :rocket: Getting Started
