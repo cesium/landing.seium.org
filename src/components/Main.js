@@ -5,6 +5,7 @@ import Background from "../images/Background.png";
 import Mascote from "./Mascote";
 
 import Info from "./Info";
+import Registration from "./Registration";
 
 const Main = (props) => {
   const { width } = props;
@@ -14,6 +15,9 @@ const Main = (props) => {
         <>
           <Grid item xs={12}>
             <Info />
+          </Grid>
+          <Grid container item xs={12} justify="center" alignItems="center">
+            <Registration />
           </Grid>
           <Grid item xs={12}>
             <Mascote width={width} />
@@ -27,15 +31,25 @@ const Main = (props) => {
           <Grid item md={8}>
             <Info />
           </Grid>
-          <Grid
-            container
-            item
-            style={{ height: "100vh" }}
-            md={2}
-            justify="flex-end"
-            alignItems="flex-end"
-          >
-            <img className="background" src={Background} alt="Background" />
+          <Grid container md={2} style={{ height: "100vh" }}>
+            <Grid
+              container
+              item
+              xs={10}
+              justify="flex-end"
+              alignItems="flex-start"
+            >
+              <Registration />
+            </Grid>
+            <Grid
+              container
+              item
+              xs={2}
+              justify="flex-end"
+              alignItems="flex-end"
+            >
+              <img className="background" src={Background} alt="Background" />
+            </Grid>
           </Grid>
         </>
       )}
