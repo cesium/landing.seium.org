@@ -1,22 +1,14 @@
 import React from "react";
 import { Button } from "@material-ui/core";
+import registrations from "../data/registrations.json";
 
 const Registration = () => (
   <div className="registration-container">
-    <Button
-      href={"https://codingcompetitions.withgoogle.com/hashcode/"}
-      color="primary"
-      className="registration"
-    >
-      Hash Code
-    </Button>
-    <Button
-      href={"http://seium21.eventbrite.pt/"}
-      color="primary"
-      className="registration"
-    >
-      Inscrições
-    </Button>
+    {registrations.map((registration) => (
+      <Button href={registration.url} color="primary" className="registration">
+        {registration.label}
+      </Button>
+    ))}
   </div>
 );
 
