@@ -25,31 +25,29 @@ const Main = (props) => {
         </>
       ) : (
         <>
+          <Grid
+            container
+            item
+            xs={11}
+            justify="flex-end"
+            alignItems="flex-start"
+          >
+            <Registration />
+          </Grid>
           <Grid item md={2}>
             <Mascote width={width} />
           </Grid>
           <Grid item md={8}>
             <Info />
           </Grid>
-          <Grid container md={2} style={{ height: "100vh" }}>
-            <Grid
-              container
-              item
-              xs={10}
-              justify="flex-end"
-              alignItems="flex-start"
-            >
-              <Registration />
-            </Grid>
-            <Grid
-              container
-              item
-              xs={2}
-              justify="flex-end"
-              alignItems="flex-end"
-            >
-              <img className="background" src={Background} alt="Background" />
-            </Grid>
+          <Grid
+            container
+            md={2}
+            style={{ height: "100vh" }}
+            justify="flex-end"
+            alignItems="flex-end"
+          >
+            <img className="background" src={Background} alt="Background" />
           </Grid>
         </>
       )}
