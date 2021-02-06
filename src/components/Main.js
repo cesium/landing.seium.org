@@ -16,7 +16,7 @@ const Main = (props) => {
           <Grid item xs={12}>
             <Info />
           </Grid>
-          <Grid container item xs={12} justify="center" alignItems="center">
+          <Grid container item xs={4} justify="center" alignItems="center">
             <Registration />
           </Grid>
           <Grid item xs={12}>
