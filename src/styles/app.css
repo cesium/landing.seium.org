@@ -80,7 +80,7 @@ a.mailSponser {
   font-family: "Coolvetica", sans-serif;
   transition: transform 250ms;
   text-transform: uppercase;
-  margin: 20px;
+  margin: 20px 5px;
   color: white;
   text-decoration: none;
 }
@@ -115,4 +115,8 @@ a.mailSponser:hover {
     color: white;
     margin: 20px;
   }
+}
+
+.registration-container {
+  display: contents;
 }
