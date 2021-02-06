@@ -116,3 +116,7 @@ a.mailSponser:hover {
     margin: 20px;
   }
 }
+
+.registration-container {
+  display: contents;
+}
