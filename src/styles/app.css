@@ -80,7 +80,7 @@ a.mailSponser {
   font-family: "Coolvetica", sans-serif;
   transition: transform 250ms;
   text-transform: uppercase;
-  margin: 20px;
+  margin: 20px 5px;
   color: white;
   text-decoration: none;
 }
