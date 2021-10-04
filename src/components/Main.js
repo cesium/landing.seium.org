@@ -1,11 +1,10 @@
 import React from "react";
 import { Grid, withWidth } from "@material-ui/core";
-import Background from "../images/Background.png";
+import Background from "../images/Background.png"; 
 
 import Mascote from "./Mascote";
 
 import Info from "./Info";
-import Registration from "./Registration";
 
 const Main = (props) => {
   const { width } = props;
@@ -16,9 +15,13 @@ const Main = (props) => {
           <Grid item xs={12}>
             <Info />
           </Grid>
-          <Grid container item xs={12} justify="center" alignItems="center">
-            <Registration />
-          </Grid>
+          <Grid
+            container
+            item
+            xs={12}
+            justify="center"
+            alignItems="center"
+          ></Grid>
           <Grid item xs={12}>
             <Mascote width={width} />
           </Grid>
@@ -31,15 +34,14 @@ const Main = (props) => {
             xs={11}
             justify="flex-end"
             alignItems="flex-start"
-          >
-            <Registration />
-          </Grid>
+          ></Grid>
+
           <Grid item md={2}>
             <Mascote width={width} />
           </Grid>
           <Grid item md={8}>
             <Info />
-          </Grid>
+          </Grid> 
           <Grid
             container
             md={2}

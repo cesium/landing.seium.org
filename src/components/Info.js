@@ -8,9 +8,9 @@ const Info = () => (
     <Box textAlign="center">
       <Animation />
       <h1 className="title">SEMANA DA ENGENHARIA INFORMÁTICA</h1>
-      <h2 className="date">23 A 28 DE FEVEREIRO DE 2021</h2>
+      <h2 className="date">15 A 20 DE FEVEREIRO DE 2022</h2>
       <SocialLinks />
-      <a href={"https://2019.seium.org/"} className="edicao">
+      <a href={"https://2021.seium.org/"} className="edicao">
         EDIÇÃO ANTERIOR
       </a>
       <p>
