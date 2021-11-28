@@ -118,5 +118,7 @@ a.mailSponser:hover {
 }
 
 .registration-container {
-  display: contents;
+  display: inline;
+  position: absolute;
+  top: 0;
 }

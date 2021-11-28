@@ -1,0 +1,33 @@
+{
+  "info": {
+    "title": "SEMANA DA ENGENHARIA INFORMÁTICA",
+    "date": "23 A 28 DE FEVEREIRO DE 2021"
+  },
+  "social": {
+    "facebook": "SEI.UMinho",
+    "instagram": "sei.uminho",
+    "mail": "geral@seium.org"
+    },
+  "sei19": {
+    "page": "https://2019.seium.org/",
+    "subject": "EDIÇÃO ANTERIOR"
+  },
+  "sponsor": {
+    "email": "relacoes.externas@seium.org",
+    "subject": "SEJA PATROCINADO"
+  },
+  "images": {
+    "mascote": {
+      "path": "Mascote.svg",
+      "alt": "Mascote Logo"
+    },
+    "mascoteHead": {
+      "path": "MascoteHead.png",
+      "alt": "MascoteHead Logo"
+    },
+    "background": {
+      "path": "Background.png",
+      "alt": "Background"
+    }
+  }
+}

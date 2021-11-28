@@ -6,7 +6,7 @@ import { Box } from "@material-ui/core";
 const Info = () => (
   <>
     <Box textAlign="center">
-      <Animation />
+      <Animation/>
       <h1 className="title">SEMANA DA ENGENHARIA INFORMÁTICA</h1>
       <h2 className="date">15 A 20 DE FEVEREIRO DE 2022</h2>
       <SocialLinks />

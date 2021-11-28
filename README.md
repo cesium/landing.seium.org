@@ -19,26 +19,26 @@ The following software is required to be installed on your system:
 
 - [nodejs 15.7+](https://nodejs.org/en/download/)
 
-Install all dependencies using `yarn`.
+Install all dependencies using `npm install`.
 
 ### :hammer: Development
 
 Starting the development server.
 
 ```
-yarn start
+npm start
 ```
 
 Format your code.
 
 ```
-yarn format
+npm format
 ```
 
 Lint your code.
 
 ```
-yarn lint
+npm lint
 ```
 
 Thanks to [husky](https://github.com/typicode/husky), the `lint` and `format`
@@ -51,7 +51,7 @@ your code.
 Bundling the app into static files for production.
 
 ```
-yarn build
+npm build
 ```
 
 ## :handshake: Contributing
