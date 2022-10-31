@@ -32,7 +32,7 @@ const Main = (props) => {
             justify="flex-end"
             alignItems="flex-start"
           >
-            <Registration />
+            {/* <Registration /> */}
           </Grid>
           <Grid item md={2}>
             <Mascote width={width} />
