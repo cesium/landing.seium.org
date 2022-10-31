@@ -8,7 +8,7 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-color: #01253D;
+  background-color: #01253d;
 }
 
 .content {
@@ -70,7 +70,7 @@ a.social-link {
 }
 
 a.social-link:hover {
-  color: #36DBEE;
+  color: #36dbee;
   transform: scale(1.5);
 }
 
@@ -88,7 +88,7 @@ a.mailSponser {
 a.registration:hover,
 a.edicao:hover,
 a.mailSponser:hover {
-  color: #36DBEE;
+  color: #36dbee;
   transform: scale(1.2);
 }
 
