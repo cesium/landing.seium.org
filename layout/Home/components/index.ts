@@ -1,3 +1,3 @@
 import SocialLinks from "./SocialLinks";
 
-export {SocialLinks};
+export { SocialLinks };
