@@ -1,3 +1,4 @@
 import SocialLinks from "./SocialLinks";
+import Animation from "./Animation";
 
-export { SocialLinks };
+export { Animation, SocialLinks };
