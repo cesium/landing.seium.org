@@ -1,56 +1,59 @@
 {
-  "name": "landing",
-  "version": "0.1.0",
+  "name": "seium_landing",
+  "version": "1.0.0",
   "private": true,
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.34",
-    "@fortawesome/free-brands-svg-icons": "^5.15.1",
-    "@fortawesome/free-regular-svg-icons": "^5.15.1",
-    "@fortawesome/react-fontawesome": "^0.1.14",
-    "@material-ui/core": "^4.11.2",
-    "normalize.css": "^8.0.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-lottie": "^1.2.3",
-    "react-scripts": "4.0.1",
-    "react-spring": "^8.0.27",
-    "web-vitals": "^0.2.4"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint --fix src/**/*.js",
-    "format": "prettier --write src/**/*.{js,json,css}"
+    "dev": "npm-run-all develop",
+    "develop": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "generate": "plop --plopfile generator/plopfile.js",
+    "prepare": "husky install",
+    "fmt": "npx npm-run-all format",
+    "format": "npx prettier --ignore-path .gitignore '!**/*.hbs' --write .",
+    "test": "npm-run-all test:*",
+    "test:lint": "npm-run-all test:lint:*",
+    "test:lint:js": "next lint",
+    "test:format": "npx prettier --check . --ignore-path .gitignore '!**/*.hbs'"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "lint-staged": {
+    "**/!(*.hbs)": "prettier --ignore-unknown"
   },
-  "husky": {
-    "hooks": {
-      "post-commit": "npm run lint && npm run format"
-    }
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.16",
+    "@headlessui/react": "^1.4.2",
+    "@heroicons/react": "^1.0.5",
+    "lottie-react": "^2.4.0",
+    "next": "12.3.1",
+    "react": "18.2.0",
+    "react-cool-inview": "^2.0.8",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "eslint-config-prettier": "^7.2.0",
-    "eslint-plugin-prettier": "^3.3.1",
-    "husky": "^4.3.8",
-    "prettier": "^2.2.1"
+    "@types/node": "18.7.18",
+    "@types/qrcode": "^1.5.0",
+    "@types/react": "18.0.21",
+    "@types/react-dom": "18.0.6",
+    "autoprefixer": "^10.4.13",
+    "eslint": "^8.31.0",
+    "eslint-config-next": "^12.0.5",
+    "eslint-config-prettier": "^8.3.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.2.1",
+    "npm-run-all": "^4.1.5",
+    "plop": "^3.1.1",
+    "postcss": "^8.4.21",
+    "prettier": "^2.5.1",
+    "prettier-plugin-tailwindcss": "^0.1.1",
+    "tailwindcss": "^3.2.7",
+    "typescript": "4.8.3"
   }
 }

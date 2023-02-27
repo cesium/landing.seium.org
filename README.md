@@ -6,7 +6,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/7eaf047e-5f4c-42d4-b55b-985977260d84/deploy-status)](https://app.netlify.com/sites/landing-2021-seium/deploys)
 
-A landing page for the Software Engineering Week website built with React.
+A landing page for the Software Engineering Week website built with NextJS.
 
 ## :rocket: Getting Started
 
@@ -17,7 +17,7 @@ local machine for development and testing purposes.
 
 The following software is required to be installed on your system:
 
-- [nodejs 15.7+](https://nodejs.org/en/download/)
+- [nodejs 18.12+](https://nodejs.org/en/download/)
 
 Install all dependencies using `npm install`.
 
@@ -26,32 +26,27 @@ Install all dependencies using `npm install`.
 Starting the development server.
 
 ```
-npm start
+npm run dev
 ```
 
 Format your code.
 
 ```
-npm format
+npm run format
 ```
 
 Lint your code.
 
 ```
-npm lint
+npm run lint
 ```
-
-Thanks to [husky](https://github.com/typicode/husky), the `lint` and `format`
-script will run every time you make a commit. If you receive any warnings or
-your code isn't properly formatted, you should update your commit before pushing
-your code.
 
 ### :package: Deployment
 
 Bundling the app into static files for production.
 
 ```
-npm build
+npm run build
 ```
 
 ## :handshake: Contributing
