@@ -1,8 +1,15 @@
 [build]
   command = "npm run build"
-  publish = "build"
+  publish = ".next"
+
 [build.processing]
   skip_processing = false
+
 [build.processing.images]
   compress = true
 
+[build.environment]
+  NODE_VERSION = "18.12.0"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
