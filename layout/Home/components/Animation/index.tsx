@@ -1,4 +1,4 @@
-import logo from "/data/sei_logo_animation.json";
+import logo from "../../../../data/sei_logo_animation.json";
 import Lottie from "lottie-react";
 
 function Animation() {
