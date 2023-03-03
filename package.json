@@ -31,6 +31,7 @@
     "@fortawesome/react-fontawesome": "^0.1.16",
     "@headlessui/react": "^1.4.2",
     "@heroicons/react": "^1.0.5",
+    "@netlify/plugin-nextjs": "^4.30.4",
     "lottie-react": "^2.4.0",
     "next": "12.3.1",
     "react": "18.2.0",
