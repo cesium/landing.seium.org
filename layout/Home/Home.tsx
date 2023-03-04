@@ -1,6 +1,6 @@
 import { Animation, SocialLinks } from "./components";
 import Head from "next/head";
-import Image from "next/image";
+
 function Home() {
   return (
     <>
@@ -11,20 +11,20 @@ function Home() {
         <div className="relative z-50 m-auto block text-center font-iregular text-white">
           <Animation />
           <h1 className="font-terminal-uppercase z-50 block text-3xl font-bold lg:text-5xl">
-            SEMANA DA ENGENHARIA INFORMÁTICA
+            Semana da Engenharia Informática
           </h1>
           <SocialLinks />
           <a
             href="https://2023.seium.org/"
-            className="text-md mt-6 block lg:text-lg"
+            className="text-md mt-6 block uppercase lg:text-lg"
           >
-            EDIÇÃO ANTERIOR
+            Edição anterior
           </a>
           <a
             href="mailto:relacoes.externas@seium.org"
-            className="mt-2 block text-lg text-quinary underline lg:text-xl"
+            className="mt-2 block text-lg uppercase text-quinary underline lg:text-xl"
           >
-            SEJA PATROCINADOR
+            Seja patrocinador
           </a>
         </div>
         <div className="fixed bottom-0 left-0 z-0 hidden h-auto w-1/2 p-0 lg:block">
