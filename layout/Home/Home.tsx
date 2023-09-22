@@ -15,6 +15,12 @@ function Home() {
           </h1>
           <SocialLinks />
           <a
+            href="https://cesium.link/u/3dhgc-NsVI"
+            className="mt-2 block text-lg uppercase text-quinary underline lg:text-xl py-2"
+          >
+            Junta-te à nossa equipa
+          </a>
+          <a
             href="https://2023.seium.org/"
             className="text-md mt-6 block uppercase lg:text-lg"
           >
