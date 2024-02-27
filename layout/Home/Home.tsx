@@ -23,8 +23,8 @@ function Home() {
           <h1 className="z-50 block font-terminal text-2xl font-bold uppercase lg:text-3xl">
             Semana da Engenharia Informática
           </h1>
-          <h2 className="mt-2 font-terminal text-xl text-quinary lg:text-2xl">
-            IN A FUTURE NOT SO FAR AWAY
+          <h2 className="mt-2 uppercase font-terminal text-xl text-quinary lg:text-2xl">
+            In a future not so far away
           </h2>
           <SocialLinks />
           <a
