@@ -1,46 +1,54 @@
-import { Animation, SocialLinks, SpotlightShape } from "./components";
+import { Button, SocialLinks, StarryBackground } from "./components";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 
 function Home() {
   return (
     <>
       <Head>
-        <title>Semana Engenharia Informática</title>
+        <title>Semana da Engenharia Informática</title>
       </Head>
-      <SpotlightShape />
-      <div className="flex h-screen w-screen items-center bg-primary px-4 font-iregular">
-        <div className="relative z-50 m-auto block text-center text-white">
-          <div className="mb-8 flex w-full justify-center">
+      <div className="flex h-screen w-screen select-none items-center px-4 font-iregular">
+        <div className="m-auto flex flex-col items-center gap-4 text-center text-white">
+          <div className="flex w-full flex-col items-center justify-center gap-4 pb-4">
             <Image
               alt="void"
-              src="/img/void_head.svg"
+              src="/img/sei-logo.svg"
               className="px-8"
               width={250}
               height={250}
             />
+            <div className="flex w-full flex-row items-center justify-center gap-2">
+              by
+              <Link target="_blank" href="https://cesium.pt">
+                <Image
+                  alt="cesium"
+                  width={90}
+                  height={90}
+                  src="/img/cesium-logo.svg"
+                ></Image>
+              </Link>
+            </div>
           </div>
-          <h1 className="z-50 block font-terminal text-2xl font-bold uppercase lg:text-3xl">
-            Semana da Engenharia Informática
-          </h1>
-          <h2 className="mt-2 uppercase font-terminal text-xl text-quinary lg:text-2xl">
-            In a future not so far away
-          </h2>
+          <Button
+            title="Call for team"
+            href={"https://cesium.link/f/sei-team"}
+          />
+          <Button
+            title="Sponsor us"
+            href={"mailto:relacoes.externas@seium.org"}
+          />
+          <Link
+            href={"https://2024.seium.org"}
+            className="font-terminal-uppercase transition-all hover:underline"
+          >
+            Last edition
+          </Link>
           <SocialLinks />
-          <a
-            href="https://2024.seium.org/"
-            className="text-md lg:text-md mt-6 block uppercase hover:text-quinary"
-          >
-            Edição anterior
-          </a>
-          <a
-            href="mailto:relacoes.externas@seium.org"
-            className="text-md mt-2 block uppercase text-quinary hover:underline lg:text-lg"
-          >
-            Seja patrocinador
-          </a>
         </div>
       </div>
+      <StarryBackground />
     </>
   );
 }

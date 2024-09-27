@@ -1,35 +1,30 @@
+import Link from "next/link";
 import React from "react";
-import {
-  BsFacebook,
-  BsInstagram,
-  BsFillEnvelopeFill,
-  BsDiscord,
-} from "react-icons/bs";
+import { BsInstagram, BsFillEnvelopeFill, BsDiscord } from "react-icons/bs";
 
 function SocialLinks() {
   return (
-    <div className="mt-16 flex justify-center">
-      <a
+    <div className="mt-8 flex justify-center">
+      <Link
         href="https://www.instagram.com/sei.uminho"
-        className="px-4 hover:text-quinary"
+        className="px-4 transition-colors  hover:text-quinary"
+        target="_blank"
       >
-        <BsInstagram size="2rem" />
-      </a>
-      <a
-        href="https://www.facebook.com/SEI.UMinho"
-        className="px-4 hover:text-quinary"
-      >
-        <BsFacebook size="2rem" />
-      </a>
-      <a
+        <BsInstagram size="1.5rem" />
+      </Link>
+      <Link
         href="https://discord.gg/stUtCjsnHx"
-        className="px-4 hover:text-quinary"
+        className="px-4 transition-colors  hover:text-quinary"
+        target="_blank"
       >
-        <BsDiscord size="2rem" />
-      </a>
-      <a href="mailto:geral@seium.org" className="px-4 hover:text-quinary">
-        <BsFillEnvelopeFill size="2rem" />
-      </a>
+        <BsDiscord size="1.5rem" />
+      </Link>
+      <Link
+        href="mailto:geral@seium.org"
+        className="px-4 transition-colors hover:text-quinary"
+      >
+        <BsFillEnvelopeFill size="1.5rem" />
+      </Link>
     </div>
   );
 }

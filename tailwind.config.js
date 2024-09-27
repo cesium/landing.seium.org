@@ -30,7 +30,7 @@ module.exports = {
         secondary: "#04041C",
         tertiary: "#04041C",
         quaternary: "#330BFF",
-        quinary: "#FF800D",
+        quinary: "#330BBF",
         success: "#008F05",
         failure: "#FF4444",
         warning: "#E09200",

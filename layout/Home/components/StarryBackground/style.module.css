@@ -1,0 +1,32 @@
+.star {
+  --size: 20vmin;
+  --holes: calc(var(--size) * 0.495);
+  width: var(--size);
+  aspect-ratio: 1/1;
+  position: fixed;
+  background: #330bff;
+  --mask: radial-gradient(
+      var(--holes) at var(--holes) var(--holes),
+      #0000 99%,
+      #000
+    )
+    calc(var(--holes) * -1) calc(var(--holes) * -1);
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+  border-radius: 50%;
+  animation: sparkle 1s linear forwards;
+  z-index: -1;
+  filter: blur(30px);
+}
+
+@keyframes sparkle {
+  0% {
+    transform: scale(0);
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
