@@ -19,6 +19,11 @@ canvas {
   overflow: hidden;
 }
 
+button {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
 @font-face {
   font-family: "Inter-Regular";
   src: url("/fonts/Inter/Inter-Regular.ttf") format("truetype");
