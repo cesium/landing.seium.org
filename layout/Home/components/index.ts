@@ -1,5 +1,6 @@
 import SocialLinks from "./SocialLinks";
 import Animation from "./Animation";
-import SpotlightShape from "./SpotlightShape";
+import Button from "./Button";
+import StarryBackground from "./StarryBackground";
 
-export { Animation, SocialLinks, SpotlightShape };
+export { Animation, SocialLinks, Button, StarryBackground };
