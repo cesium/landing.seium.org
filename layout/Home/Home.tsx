@@ -32,10 +32,6 @@ function Home() {
             </div>
           </div>
           <Button
-            title="Call for team"
-            href={"https://cesium.link/f/sei-team"}
-          />
-          <Button
             title="Sponsor us"
             href={"mailto:relacoes.externas@seium.org"}
           />
