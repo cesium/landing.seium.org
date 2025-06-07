@@ -36,7 +36,7 @@ function Home() {
             href={"mailto:relacoes.externas@seium.org"}
           />
           <Link
-            href={"https://2024.seium.org"}
+            href={"https://2025.seium.org"}
             className="font-terminal-uppercase transition-all hover:underline"
           >
             Last edition
