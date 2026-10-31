@@ -7,48 +7,47 @@
     "develop": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "generate": "plop --plopfile generator/plopfile.js",
-    "prepare": "husky install",
-    "fmt": "npx npm-run-all format",
-    "format": "npx prettier --ignore-path .gitignore '!**/*.hbs' --write .",
+    "prepare": "husky",
+    "fmt": "bunx npm-run-all format",
+    "format": "bunx prettier --ignore-path .gitignore '!**/*.hbs' --write .",
     "test": "npm-run-all test:*",
     "test:lint": "npm-run-all test:lint:*",
-    "test:lint:js": "next lint",
-    "test:format": "npx prettier --check . --ignore-path .gitignore '!**/*.hbs'"
+    "test:lint:js": "eslint .",
+    "test:format": "bunx prettier --check . --ignore-path .gitignore '!**/*.hbs'"
   },
   "lint-staged": {
     "**/!(*.hbs)": "prettier --ignore-unknown"
   },
   "engines": {
-    "node": ">=16.0.0",
-    "npm": ">=8.0.0"
+    "node": ">=20.9.0"
   },
   "dependencies": {
-    "lottie-react": "^2.4.0",
-    "next": "^14.2.13",
-    "react": "18.2.0",
+    "lottie-react": "^3.1.2",
+    "next": "^16.4.3",
+    "react": "^19.3.1",
     "react-cool-inview": "^2.0.8",
-    "react-dom": "18.2.0",
-    "react-icons": "^4.8.0"
+    "react-dom": "^19.3.1",
+    "react-icons": "^5.7.0"
   },
   "devDependencies": {
-    "@types/node": "18.7.18",
+    "@types/node": "20",
     "@types/qrcode": "^1.5.0",
-    "@types/react": "18.0.21",
-    "@types/react-dom": "18.0.6",
-    "autoprefixer": "^10.4.13",
-    "eslint": "^8.31.0",
-    "eslint-config-next": "^12.0.5",
-    "eslint-config-prettier": "^8.3.0",
-    "husky": "^7.0.4",
-    "lint-staged": "^12.2.1",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "autoprefixer": "^10.6.2",
+    "eslint": "9",
+    "eslint-config-next": "^16.4.3",
+    "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.0",
     "npm-run-all": "^4.1.5",
-    "plop": "^3.1.1",
-    "postcss": "^8.4.21",
-    "prettier": "^2.5.1",
-    "prettier-plugin-tailwindcss": "^0.1.1",
+    "plop": "^4.0.5",
+    "postcss": "^8.5.32",
+    "prettier": "3",
+    "prettier-plugin-tailwindcss": "^0.8.1",
     "tailwindcss": "^3.2.7",
-    "typescript": "4.8.3"
+    "typescript": "5"
   }
 }
