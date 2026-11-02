@@ -9,6 +9,7 @@ const geistMono = Geist_Mono({
 const geistPixel = Geist_Pixel({
   subsets: ["latin"],
   variable: "--font-geist-pixel",
+  fallback: ["monospace"],
   adjustFontFallback: false,
 });
 

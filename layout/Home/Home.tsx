@@ -1,4 +1,4 @@
-import { Button, SocialLinks } from "./components";
+import { Button, SocialLinks, Metaballs } from "./components";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -46,6 +46,7 @@ function Home() {
           <SocialLinks />
         </div>
       </div>
+      <Metaballs />
     </>
   );
 }
