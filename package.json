@@ -3,12 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "npm-run-all develop",
-    "develop": "next dev",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "fmt": "bunx npm-run-all format",
     "format": "bunx prettier --ignore-path .gitignore --write .",
     "test": "npm-run-all test:*",
     "test:lint": "npm-run-all test:lint:*",

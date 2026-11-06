@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 html {
-  overflow-x: hidden;
-  height: 100%;
+  overflow: hidden;
+  height: 100vh;
 }
 
 body {
-  background: linear-gradient(to top, #0e00b6, #0a0855);
+  background: #0e00b6 linear-gradient(to top, #0e00b6, #0a0855);
 }

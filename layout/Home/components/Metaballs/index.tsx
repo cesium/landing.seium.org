@@ -354,7 +354,10 @@ function Metaballs() {
   }, []);
 
   return (
-    <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-10">
+    <div
+      aria-hidden="true"
+      className="pointer-events-none fixed inset-0 -z-10 h-screen"
+    >
       <canvas
         ref={canvasRef}
         className={`absolute inset-0 h-full w-full ${isShaderUnavailable ? "invisible" : ""}`}

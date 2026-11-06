@@ -8,6 +8,10 @@ function Home() {
     <>
       <Head>
         <title>Semana da Engenharia Informática</title>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
       </Head>
       <div className="flex h-screen w-screen select-none items-center px-4">
         <div className="m-auto flex flex-col items-center gap-4 text-center text-white">
