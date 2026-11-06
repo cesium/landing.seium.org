@@ -1,42 +1,12 @@
-/* ./styles/globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html {
-  overflow-x: hidden;
-  height: 100%;
+  overflow: hidden;
+  height: 100vh;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background: #04041c;
-}
-
-canvas {
-  margin: 0;
-  overflow: hidden;
-}
-
-button {
-  -webkit-tap-highlight-color: transparent;
-  outline: none;
-}
-
-@font-face {
-  font-family: "Inter-Regular";
-  src: url("/fonts/Inter/Inter-Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Terminal";
-  src: url("/fonts/TerminalGrotesque/TerminalGrotesque.ttf") format("truetype");
-}
-
-.font-terminal-uppercase {
-  @apply font-terminal;
-  text-transform: uppercase;
-  -webkit-text-stroke-color: currentColor;
-  -webkit-text-stroke-width: 0.25px;
+  background: #0e00b6 linear-gradient(to top, #0e00b6, #0a0855);
 }

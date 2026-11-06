@@ -17,28 +17,29 @@ local machine for development and testing purposes.
 
 The following software is required to be installed on your system:
 
-- [nodejs 18.12+](https://nodejs.org/en/download/)
+- [nodejs 20.9+](https://nodejs.org/en/download/)
+- [bun](https://bun.sh/)
 
-Install all dependencies using `npm install`.
+Install all dependencies using `bun install`.
 
 ### :hammer: Development
 
 Starting the development server.
 
 ```
-npm run dev
+bun dev
 ```
 
 Format your code.
 
 ```
-npm run format
+bun format
 ```
 
 Lint your code.
 
 ```
-npm run lint
+bun lint
 ```
 
 ### :package: Deployment
@@ -46,7 +47,7 @@ npm run lint
 Bundling the app into static files for production.
 
 ```
-npm run build
+bun run build
 ```
 
 ## :handshake: Contributing

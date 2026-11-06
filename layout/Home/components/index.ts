@@ -1,6 +1,5 @@
 import SocialLinks from "./SocialLinks";
-import Animation from "./Animation";
 import Button from "./Button";
-import StarryBackground from "./StarryBackground";
+import Metaballs from "./Metaballs";
 
-export { Animation, SocialLinks, Button, StarryBackground };
+export { SocialLinks, Button, Metaballs };
